@@ -40,7 +40,7 @@ function Nav() {
           </a>
 
           <a
-            href="/new"
+            href="/login"
             className="text-black hover:bg-white-500 px-3 py-2 rounded"
           >
             Log In
