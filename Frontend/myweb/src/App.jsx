@@ -1,32 +1,28 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Nav from './Pages/Nav'
+import { BrowserRouter  , Routes ,Route } from 'react-router-dom'
+//import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+ 
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <Nav/>
+      <div className='container mx-auto p-4 flex justify-between items-center'>
+      <BrowserRouter>
+      
+      <Routes>
+       <Route path = "/" element= {<h1>Available Books</h1>} />
+       <Route path = "/add" element= {<h1>Most Popular Books</h1>} />
+       <Route path = "/new" element= {<h1>New Books</h1>} />
+      </Routes>
+      </BrowserRouter>
+       
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+     
+      <p className="bg-black-500 text-white mx-auto p-2 w-1/2 text-center px-3 py-2 rounded">
+        here you can  Read books  
       </p>
     </>
   )
