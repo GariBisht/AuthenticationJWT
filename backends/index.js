@@ -1,13 +1,28 @@
 const express = require("express");
+const app = express();
 const cors = require("cors");
 require("./db/config");
 const User = require('./db/User');
 const Jwt = require('jsonwebtoken');
 const jwtKey = 'gari';
-const app = express();
+
 
 app.use(express.json());
 app.use(cors());
+
+
+// app.get("/" , (req , resp) => {
+//     resp.send("App is Working....")
+// });
+
+// app.listen(5000);
+
+
+
+
+
+
+
 
 app.post("/register", async (req, resp) => {
     let user = new User(req.body);
