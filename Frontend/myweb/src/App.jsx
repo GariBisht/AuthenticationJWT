@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Nav from './Pages/Nav'
 import LogIn from './Pages/LogIn'
+import Footer from './Pages/Footer'
 import { BrowserRouter  , Routes ,Route } from 'react-router-dom'
 //import './App.css'
 
@@ -36,9 +37,11 @@ function App() {
        
       {/* </div> */}
      
-      <p className="bg-blue-500 text-white mx-auto p-2 w-1/2 text-center px-3 py-2 rounded">
+      {/* <p className="bg-blue-500 text-white mx-auto p-2 w-1/2 text-center px-3 py-2 rounded">
         here you can  Read books  
-      </p>
+      </p> */}
+      <Footer />
+      
     </>
   )
 }
